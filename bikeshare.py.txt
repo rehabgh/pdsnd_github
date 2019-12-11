@@ -123,7 +123,7 @@ def station_stats(df):
 
 
 
-    # TO DO: display most commonly used start station
+    # TO DO: display most commonly used start station based on the selected city.
 
     Start_Station = df['Start Station'].value_counts().idxmax()
     print('Most Commonly used start station:', Start_Station)
@@ -135,7 +135,7 @@ def station_stats(df):
     print('\nMost Commonly used end station:', End_Station)
 
 
-    # TO DO: display most frequent combination of start station and end station trip
+    # TO DO: display most frequent combination of start station and end station trip based on the selected city.
 
     Combination_Station = df.groupby(['Start Station', 'End Station']).count()
     print('\nMost Commonly used combination of start station and end station trip:', Start_Station, " & ", End_Station)
@@ -187,7 +187,7 @@ def user_stats(df):
         
     
 
-    # TO DO: Display earliest, most recent, and most common year of birth
+    # TO DO: Display earliest, most recent, and most common year of birth among the cities.
     
      
     if 'Birth Year' in list(df.columns):
